@@ -136,7 +136,7 @@ public class Robot : MonoBehaviour {
 	{
 		if(other.tag =="fuego")
 		{
-			Debug.Log("esta chocando");
+			//aca choca con fuego
 		}
 	}
 }
