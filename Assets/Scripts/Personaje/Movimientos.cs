@@ -42,6 +42,22 @@ public class Movimientos : MonoBehaviour {
 					Application.LoadLevel("nivel3");
 				}
 			}
+			if( Input.GetKeyDown( KeyCode.Escape ) )
+			{
+				Debug.Log("recargar");
+				if(nivel == 1)
+				{
+					Application.LoadLevel("nivel1");
+				}
+				if(nivel == 2)
+				{
+					Application.LoadLevel("nivel2");
+				}
+				if(nivel == 3)
+				{
+					Application.LoadLevel("nivel3");
+				}
+			}
 		}
 		if(activado)
 		{

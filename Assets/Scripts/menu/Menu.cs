@@ -18,4 +18,9 @@ public class Menu : MonoBehaviour {
 	{
 		Application.LoadLevel("nivel1");
 	}
+
+	public void volverMenu()
+	{
+		Application.LoadLevel("menu");
+	}
 }

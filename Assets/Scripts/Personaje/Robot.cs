@@ -204,7 +204,7 @@ public class Robot : MonoBehaviour {
 			}
 			if(nivel == 3)
 			{
- 				Application.LoadLevel("nivel4");
+ 				Application.LoadLevel("menuGanaste");
 			}
 			
 		}
