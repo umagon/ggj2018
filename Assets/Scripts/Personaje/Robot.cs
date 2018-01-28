@@ -5,6 +5,7 @@ using System.Linq;
 public class Robot : MonoBehaviour {
 
 	// Use this for initialization
+	public int nivel;
 	public GameObject movimiento;
 	private int indice = 0;
     public System.Collections.Generic.List<string> movs ;
@@ -23,6 +24,7 @@ public class Robot : MonoBehaviour {
 	private int cantidadSeñales= 0;
 
 	public bool enMovimiento= true;
+
 	void Start () {
 		movs = movimiento.GetComponent<Movimientos>().señales;
 		cantidadSeñales = movs.Count;
@@ -48,6 +50,8 @@ public class Robot : MonoBehaviour {
 	{
 		if(arriba)
 		{
+		
+			
 			transform.Translate ( Vector2.up  *Time.deltaTime );
 			timer -= Time.deltaTime;
 			if(timer < 0)
@@ -145,8 +149,9 @@ public class Robot : MonoBehaviour {
 	/// <param name="other">The other Collider2D involved in this collision.</param>
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if(other.tag =="fuego")
+		if(other.tag =="puerta")
 		{
+			Destroy(this.gameObject);
 			//aca choca con fuego
 		}
 
@@ -170,7 +175,19 @@ public class Robot : MonoBehaviour {
 		}
 		if(other.tag=="pasarEscena")
 		{
-			Debug.Log("paso al nivel 2");
+			if(nivel == 1)
+			{
+ 				Application.LoadLevel("nivel2");
+			}
+			if(nivel == 2)
+			{
+ 				Application.LoadLevel("nivel3");
+			}
+			if(nivel == 3)
+			{
+ 				Application.LoadLevel("nivel4");
+			}
+			
 		}
 		if(other.tag=="pared")
 		{
