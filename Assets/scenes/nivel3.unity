@@ -392,7 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18fecf93879ca3949abb8def29d1b02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  robot: {fileID: 0}
+  robot: {fileID: 2022217848}
   activado: 1
   "se\xF1ales": []
   indice: 0
@@ -2552,8 +2552,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: -1, y: 2, z: 0}
     second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -2678,8 +2678,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: -2, y: 4, z: 0}
     second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -2732,11 +2732,11 @@ Tilemap:
       m_ColliderType: 1
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 3
+  - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 9f702bf41b208114996af50bcef83556, type: 2}
-  - m_RefCount: 6
+  - m_RefCount: 7
     m_Data: {fileID: 11400000, guid: b25d98d5352460f40b52414c5260a2e6, type: 2}
-  - m_RefCount: 11
+  - m_RefCount: 12
     m_Data: {fileID: 11400000, guid: 7c2e9f3ffd6652e4b877548b5f0a01d1, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 3c986ee0c97e680409146297d29c2dd6, type: 2}
@@ -2757,11 +2757,11 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 27f7e7fceaf0aa54b82523344052aeeb, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 3
+  - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 876ca7b4e019a6b44bf12cb781d22672, type: 3}
-  - m_RefCount: 6
+  - m_RefCount: 7
     m_Data: {fileID: 21300000, guid: da8e243ccf90fd74a8496cff62ce5af1, type: 3}
-  - m_RefCount: 11
+  - m_RefCount: 12
     m_Data: {fileID: 21300000, guid: 62a6b613a1321f04ba10a5f47cf380cd, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: d2571d30cad6a744da8936622444fd68, type: 3}
@@ -2890,9 +2890,37 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 212390864499912144, guid: f42e1f94f62b27a4d95f0ec6deb4b376,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2ca605918f97bbd469bddcbe45cb1635,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f42e1f94f62b27a4d95f0ec6deb4b376, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1251870276 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1671340170477536, guid: f42e1f94f62b27a4d95f0ec6deb4b376,
+    type: 2}
+  m_PrefabInternal: {fileID: 1251870275}
+--- !u!95 &1251870277
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1251870276}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 811b6a3b02cee9a4b80d7c0cb7ea4bb0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1400176917
 GameObject:
   m_ObjectHideFlags: 0
@@ -4254,9 +4282,73 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 114243989507317020, guid: b4935472073f04c4a8903db855eb9c2d,
+        type: 2}
+      propertyPath: nivel
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114243989507317020, guid: b4935472073f04c4a8903db855eb9c2d,
+        type: 2}
+      propertyPath: movimiento
+      value: 
+      objectReference: {fileID: 143456294}
+    - target: {fileID: 114243989507317020, guid: b4935472073f04c4a8903db855eb9c2d,
+        type: 2}
+      propertyPath: spriteArriba
+      value: 
+      objectReference: {fileID: 21300000, guid: 416adc1f025281447a3e96135beffb3c,
+        type: 3}
+    - target: {fileID: 114243989507317020, guid: b4935472073f04c4a8903db855eb9c2d,
+        type: 2}
+      propertyPath: spriteAbajo
+      value: 
+      objectReference: {fileID: 21300000, guid: 4e82ad6dc14eac248939721d0a5ac849,
+        type: 3}
+    - target: {fileID: 114243989507317020, guid: b4935472073f04c4a8903db855eb9c2d,
+        type: 2}
+      propertyPath: spriteDer
+      value: 
+      objectReference: {fileID: 21300000, guid: 479d44ccb1e8ce047a9d98b3ea948a98,
+        type: 3}
+    - target: {fileID: 114243989507317020, guid: b4935472073f04c4a8903db855eb9c2d,
+        type: 2}
+      propertyPath: spriteIzq
+      value: 
+      objectReference: {fileID: 21300000, guid: 5dbccc464ad3df0488e305e6a828f2b0,
+        type: 3}
+    - target: {fileID: 114243989507317020, guid: b4935472073f04c4a8903db855eb9c2d,
+        type: 2}
+      propertyPath: animatorS
+      value: 
+      objectReference: {fileID: 2022217846}
+    - target: {fileID: 114243989507317020, guid: b4935472073f04c4a8903db855eb9c2d,
+        type: 2}
+      propertyPath: rendererS
+      value: 
+      objectReference: {fileID: 2022217847}
+    - target: {fileID: 95727744023627382, guid: b4935472073f04c4a8903db855eb9c2d,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b4935472073f04c4a8903db855eb9c2d, type: 2}
   m_IsPrefabParent: 0
+--- !u!95 &2022217846 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95727744023627382, guid: b4935472073f04c4a8903db855eb9c2d,
+    type: 2}
+  m_PrefabInternal: {fileID: 2022217845}
+--- !u!212 &2022217847 stripped
+SpriteRenderer:
+  m_PrefabParentObject: {fileID: 212267432283080164, guid: b4935472073f04c4a8903db855eb9c2d,
+    type: 2}
+  m_PrefabInternal: {fileID: 2022217845}
+--- !u!1 &2022217848 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1125564023492354, guid: b4935472073f04c4a8903db855eb9c2d,
+    type: 2}
+  m_PrefabInternal: {fileID: 2022217845}
 --- !u!1 &2056583529
 GameObject:
   m_ObjectHideFlags: 0
