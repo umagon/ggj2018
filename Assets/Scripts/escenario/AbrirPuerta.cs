@@ -23,7 +23,7 @@ public class AbrirPuerta : MonoBehaviour {
 		if(unaPuerta)
 		{
 			puertaU.GetComponent<Mover>().activado= true;
-			puertaU.GetComponent<Mover>().arriba = true;
+			puertaU.GetComponent<Mover>().abajo = true;
 			this.GetComponent<SpriteRenderer>().sprite = presionado;
 		}
 		else
