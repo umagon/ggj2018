@@ -117,9 +117,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d6714289bf6fb34dad7dfa4e63d45bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nivel: 0
   movimiento: {fileID: 0}
   movs: []
   enMovimiento: 1
+  spriteDer: {fileID: 0}
+  spriteIzq: {fileID: 0}
+  spriteArriba: {fileID: 0}
+  spriteAbajo: {fileID: 0}
+  rendererS: {fileID: 0}
+  animatorS: {fileID: 0}
 --- !u!212 &212267432283080164
 SpriteRenderer:
   m_ObjectHideFlags: 1

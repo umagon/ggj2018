@@ -25,12 +25,24 @@ public class Robot : MonoBehaviour {
 
 	public bool enMovimiento= true;
 
+	public Sprite spriteDer;
+	public Sprite spriteIzq;
+	public Sprite spriteArriba;
+	public Sprite spriteAbajo;
+
+	
+	public SpriteRenderer rendererS;
+	public Animator animatorS;
+
+
+
+
 	void Start () {
 		movs = movimiento.GetComponent<Movimientos>().señales;
 		cantidadSeñales = movs.Count;
 		Debug.Log(cantidadSeñales);
 		señal(indice);
-	
+		//animatorS.se
 		/*foreach(string movimiento in movs)
 		{
 			if(movimiento.Equals("up"))
@@ -50,7 +62,7 @@ public class Robot : MonoBehaviour {
 	{
 		if(arriba)
 		{
-		
+			
 			
 			transform.Translate ( Vector2.up  *Time.deltaTime );
 			timer -= Time.deltaTime;
@@ -76,6 +88,7 @@ public class Robot : MonoBehaviour {
 		}
 		if(izquierda)
 		{
+			
 			transform.Translate ( Vector2.left  *Time.deltaTime );
 			timer -= Time.deltaTime;
 			if(timer < 0)
@@ -88,6 +101,7 @@ public class Robot : MonoBehaviour {
 
 		if(abajo)
 		{
+			
 			transform.Translate ( Vector2.down  *Time.deltaTime );
 			timer -= Time.deltaTime;
 			if(timer < 0)
@@ -114,23 +128,28 @@ public class Robot : MonoBehaviour {
 
 		if(movs.ElementAt(numero) == "up")
 		{
+			rendererS.sprite = spriteArriba;
 			arriba= true;
 			indice++;
 		}
 		if(movs.ElementAt(numero) == "down")
 		{
+			rendererS.sprite = spriteAbajo;
 			abajo= true;
 			indice++;
 		}
 
 		if(movs.ElementAt(numero) == "right")
 		{
+			rendererS.sprite = spriteDer;
+			//animatorS.animation = 
 			derecha= true;
 			indice++;
 			
 		}
 		if(movs.ElementAt(numero) == "left")
 		{
+			rendererS.sprite = spriteIzq;
 			izquierda= true;
 			indice++;
 		}
