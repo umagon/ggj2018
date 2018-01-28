@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class Movimientos : MonoBehaviour {
 
+	public int nivel;
 	public GameObject robot;
 	public bool activado = true;
 	public System.Collections.Generic.List<string> señales = new System.Collections.Generic.List<string>();
@@ -16,6 +17,7 @@ public class Movimientos : MonoBehaviour {
 	public Sprite flechaIzq;
 	public Sprite flechaAbajo;
 	public Sprite flechaArriba;
+	private bool recarga = false;
 	void Start () {
 		indice = 0;
 	}
@@ -23,12 +25,36 @@ public class Movimientos : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//si esta activado todavia se puede mandar mas señales
+		if(recarga){
+			if( Input.GetKeyDown( KeyCode.Backspace ) )
+			{
+				Debug.Log("recargar");
+				if(nivel == 1)
+				{
+					Application.LoadLevel("nivel1");
+				}
+				if(nivel == 2)
+				{
+					Application.LoadLevel("nivel2");
+				}
+				if(nivel == 3)
+				{
+					Application.LoadLevel("nivel3");
+				}
+			}
+		}
 		if(activado)
 		{
 			if( Input.GetKeyDown( KeyCode.Space ) )
 			{
 				transmitir();
 			}
+			if( Input.GetKeyDown( KeyCode.KeypadEnter ) )
+			{
+				transmitir();
+			}
+			
+
 			if( Input.GetKeyDown( KeyCode.RightArrow ) )
 			{
 				señales.Add("right");
@@ -68,13 +94,18 @@ public class Movimientos : MonoBehaviour {
 			}
 		}
 		
+		if(indice >= 20)
+		{
+			indice=19;	
+		}
+
            
 	}
 
 	public void transmitir()
 	{
 		activado = false;
-		
+		recarga=true;
 		if(robot.GetComponent<Robot>().enabled== true)
 		{
 			robot.GetComponent<Robot>().enMovimiento= true;

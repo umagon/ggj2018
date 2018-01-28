@@ -1,11 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/animaciones/camara-24_1.controller.meta
 guid: f763523e4c4c57b428ab0b595b5f0943
 timeCreated: 1517120075
-=======
-guid: f3c4818b8ad87c040912ee574046ac44
-timeCreated: 1517119968
->>>>>>> 47458757bd06118e755a812af571c5c929b4936c:Assets/Prefabs/boton.prefab.meta
 licenseType: Free
 NativeFormatImporter:
   externalObjects: {}
