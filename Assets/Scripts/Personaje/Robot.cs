@@ -7,7 +7,7 @@ public class Robot : MonoBehaviour {
 	// Use this for initialization
 	public GameObject movimiento;
 	private int indice = 0;
-    System.Collections.Generic.List<string> movs ;
+    public System.Collections.Generic.List<string> movs ;
 	private string[] señ;
 
 	private float timer = 1.0f;
@@ -21,6 +21,8 @@ public class Robot : MonoBehaviour {
 	private bool abajo = false;
 
 	private int cantidadSeñales= 0;
+
+	public bool enMovimiento= true;
 	void Start () {
 		movs = movimiento.GetComponent<Movimientos>().señales;
 		cantidadSeñales = movs.Count;
@@ -42,6 +44,8 @@ public class Robot : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+	if(enMovimiento)
+	{
 		if(arriba)
 		{
 			transform.Translate ( Vector2.up  *Time.deltaTime );
@@ -89,6 +93,14 @@ public class Robot : MonoBehaviour {
 				señal(indice);
 			}
 		}
+	}
+	if(enMovimiento == false)
+	{
+		abajo= false;
+		arriba = false;
+		derecha = false;
+		izquierda = false;
+	}	
 
 		
 	}
@@ -123,8 +135,7 @@ public class Robot : MonoBehaviour {
 			//derecha= true;
 			indice++;
 		}
-	//movs.ElementAt(numero);
-		//return movs.ElementAt(numero);;
+	
 	}
 
 	/// <summary>
@@ -137,6 +148,33 @@ public class Robot : MonoBehaviour {
 		if(other.tag =="fuego")
 		{
 			//aca choca con fuego
+		}
+
+		if(other.tag =="chispa")
+		{
+
+			Debug.Log("toca en chispaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+			enMovimiento = false;
+			indice = 0;
+			
+			movs = null;
+			movimiento.GetComponent<Movimientos>().sacarFlechas();
+			movimiento.GetComponent<Movimientos>().activado = true;
+			movimiento.GetComponent<Movimientos>().indice = 0;
+			Destroy(other.gameObject);
+		}
+
+		if(other.tag=="boton")
+		{
+			other.gameObject.GetComponent<AbrirPuerta>().abrirPuertas();
+		}
+		if(other.tag=="pasarEscena")
+		{
+			Debug.Log("paso al nivel 2");
+		}
+		if(other.tag=="pared")
+		{
+			Destroy(this.gameObject);
 		}
 	}
 }

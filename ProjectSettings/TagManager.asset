@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - fuego
+  - boton
+  - chispa
+  - puerta
+  - pasarEscena
+  - pared
   layers:
   - Default
   - TransparentFX

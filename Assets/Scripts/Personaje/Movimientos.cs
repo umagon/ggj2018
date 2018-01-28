@@ -7,7 +7,7 @@ public class Movimientos : MonoBehaviour {
 	public GameObject robot;
 	public bool activado = true;
 	public System.Collections.Generic.List<string> señales = new System.Collections.Generic.List<string>();
-	private int indice;
+	public int indice;
 	// Use this for initialization
 
 	public System.Collections.Generic.List<GameObject> mensajes = new System.Collections.Generic.List<GameObject>();
@@ -78,7 +78,27 @@ public class Movimientos : MonoBehaviour {
 
 	public void transmitir()
 	{
-		robot.GetComponent<Robot>().enabled= true;
+		activado = false;
+		
+		if(robot.GetComponent<Robot>().enabled== true)
+		{
+			robot.GetComponent<Robot>().enMovimiento= true;
+			robot.GetComponent<Robot>().movs = señales;
+			robot.GetComponent<Robot>().señal(0);
+		}
+		else{
+			robot.GetComponent<Robot>().enabled= true;
+		}
+	}
+
+	public void sacarFlechas()
+	{
+		for(int i = 0 ; i <mensajes.Count;i++)
+		{
+			mensajes.ElementAt(i).SetActive(false);
+			
+		}
+		señales = new System.Collections.Generic.List<string>();
 	}
 
 	
