@@ -10,6 +10,7 @@ TagManager:
   - puerta
   - pasarEscena
   - pared
+  - Personaje
   layers:
   - Default
   - TransparentFX

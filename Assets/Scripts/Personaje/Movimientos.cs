@@ -27,12 +27,7 @@ public class Movimientos : MonoBehaviour {
 		{
 			if( Input.GetKeyDown( KeyCode.Space ) )
 			{
-				//señales.Add("space");
-				//Debug.Log( "tocamos flecha espacio." );
-				//mensajes.ElementAt(indice).SetActive(true);
-				//indice++;
-				//mensajes.ElementAt(indice).GetComponent<Image>().sprite = ;
-				
+				transmitir();
 			}
 			if( Input.GetKeyDown( KeyCode.RightArrow ) )
 			{
